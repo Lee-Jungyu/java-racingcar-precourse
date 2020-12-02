@@ -3,6 +3,8 @@ package utils;
 import domain.Car;
 import domain.CarList;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class IOHandler {
@@ -54,12 +56,23 @@ public class IOHandler {
             System.out.print(name + " : ");
 
             for(int i = 0; i < position; i++)
-                System.out.print("- ");
+                System.out.print("-");
 
             System.out.println();
         }
 
         System.out.println();
+    }
+
+    public void printGameResult(CarList carList) {
+
+        List<Car> winnerList = carList.getWinnerList();
+
+        System.out.print("최종 우승자: ");
+        for(int i = 0; i < winnerList.size(); i++) {
+            System.out.print(winnerList.get(i).getName());
+            if(i != winnerList.size() - 1) System.out.print(", ");
+        }
     }
 
 }

@@ -19,4 +19,22 @@ public class CarList {
     public void addCar(Car car) {
         carList.add(car);
     }
+
+    public List<Car> getWinnerList() {
+        int max_position = 0;
+
+        List<Car> winnerList = new ArrayList<>();
+
+        for(Car car : carList) {
+            if(car.getPosition() > max_position) {
+                winnerList.clear();
+                winnerList.add(car);
+            }
+            if(car.getPosition() == max_position) {
+                winnerList.add(car);
+            }
+        }
+
+        return winnerList;
+    }
 }
