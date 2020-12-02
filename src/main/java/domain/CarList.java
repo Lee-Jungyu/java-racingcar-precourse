@@ -26,11 +26,11 @@ public class CarList {
         List<Car> winnerList = new ArrayList<>();
 
         for(Car car : carList) {
-            if(car.getPosition() > max_position) {
-                winnerList.clear();
+            if(car.getPosition() == max_position) {
                 winnerList.add(car);
             }
-            if(car.getPosition() == max_position) {
+            if(car.getPosition() > max_position) {
+                winnerList.clear();
                 winnerList.add(car);
             }
         }
