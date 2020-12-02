@@ -32,6 +32,7 @@ public class CarList {
             if(car.getPosition() > max_position) {
                 winnerList.clear();
                 winnerList.add(car);
+                max_position = car.getPosition();
             }
         }
 
