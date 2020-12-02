@@ -42,7 +42,7 @@ public class IOHandler {
             tmpString = scanner.next();
 
             check = Validator.checkMoveCount(tmpString);
-        } while(check);
+        } while(!check);
 
         moveCnt = Integer.parseInt(tmpString);
 
