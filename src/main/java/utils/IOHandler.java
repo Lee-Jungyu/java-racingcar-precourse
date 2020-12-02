@@ -1,7 +1,7 @@
 package utils;
 
-import racingcar.Car;
-import racingcar.CarList;
+import domain.Car;
+import domain.CarList;
 
 import java.util.Scanner;
 
