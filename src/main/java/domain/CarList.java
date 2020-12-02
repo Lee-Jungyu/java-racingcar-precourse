@@ -12,6 +12,10 @@ public class CarList {
         carList = new ArrayList<>();
     }
 
+    public List<Car> getCarList() {
+        return carList;
+    }
+
     public void addCar(Car car) {
         carList.add(car);
     }

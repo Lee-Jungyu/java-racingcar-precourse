@@ -47,4 +47,19 @@ public class IOHandler {
         return moveCnt;
     }
 
+    public void printMoveResult(CarList carList) {
+        for(Car car : carList.getCarList()) {
+            String name = car.getName();
+            int position = car.getPosition();
+            System.out.print(name + " : ");
+
+            for(int i = 0; i < position; i++)
+                System.out.print("- ");
+
+            System.out.println();
+        }
+
+        System.out.println();
+    }
+
 }
